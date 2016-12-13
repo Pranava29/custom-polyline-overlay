@@ -17,17 +17,17 @@ Usage and Example:
 
 Inculde CustomPolylineOverlayControl.js and styles.css files in your project path. Now you are ready to use the library in any js file of the project.
 
-var customPolyline = new CustomPolylineOverlay(vehicleObj, polylineOptions, mapObj);
+	var customPolyline = new CustomPolylineOverlay(vehicleObj, polylineOptions, mapObj);
 
-customPolyline.addLatLng(latLng,vehicleObj);
+	customPolyline.addLatLng(latLng,vehicleObj);
 
-customPolyline.plotPolyline();
+	customPolyline.plotPolyline();
 
 Legend:
 
 1. Example of polyine options:
 
-{
+	{
 
 	strokeColor: '#000',
 	
@@ -62,7 +62,7 @@ Legend:
 	
   	]
 	
-}
+	}
 
 Work in progress : Working to integrate with snap to roads to make the vehicle stick on roads when played
 
