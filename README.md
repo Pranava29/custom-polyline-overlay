@@ -13,20 +13,21 @@ Customization:
 
 4. Updates the position of the vehicle and plays it on the polyline to move it to the new location.
 
-Usage and Example:
+### Usage and Example:
 
 Inculde CustomPolylineOverlayControl.js and styles.css files in your project path. Now you are ready to use the library in any js file of the project.
 
-	var customPolyline = new CustomPolylineOverlay(vehicleObj, polylineOptions, mapObj);
+```javascript
+var customPolyline = new CustomPolylineOverlay(vehicleObj, polylineOptions, mapObj);
+customPolyline.addLatLng(latLng,vehicleObj);
+customPolyline.plotPolyline();
+```
 
-	customPolyline.addLatLng(latLng,vehicleObj);
-
-	customPolyline.plotPolyline();
-
-Legend:
+### Legend:
 
 1. Example of polyine options:
 
+```javascript
 {
 
 	strokeColor: '#000',
@@ -63,6 +64,7 @@ Legend:
   	]
 	
 }
+```
 
 Work in progress : Working to integrate with snap to roads to make the vehicle stick on roads when played
 
