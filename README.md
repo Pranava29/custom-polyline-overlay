@@ -4,40 +4,64 @@ SVGs plotted on Google Maps polylines are not clickable for more information. We
 This library file can be used to plot svgs on a polyline with more ease and customization. It adds a small info window next to the svg so that we can click on them to get more vehicle stats. 
 
 Customization: 
-1. SVGs can be played on the map smoothly as per user needs. 
-2. Depending on vehicle speed, the SVG icons change color
-3. Small info window can be styled as per user needs
-4. Updates the position of the vehicle and plays it on the polyline to move it to the new location
+
+1. SVGs can be played on the map smoothly as per user needs.
+
+2. Depending on vehicle speed, the SVG icons change color.
+
+3. Small info window can be styled as per user needs.
+
+4. Updates the position of the vehicle and plays it on the polyline to move it to the new location.
 
 Usage and Example:
 
-Inculde CustomPolylineOverlayControl.js and styles.css files in your project path.
-Now you are ready to use the library in any js file of the project.
+Inculde CustomPolylineOverlayControl.js and styles.css files in your project path. Now you are ready to use the library in any js file of the project.
 
 var customPolyline = new CustomPolylineOverlay(<vehicleObj>, <polylineOptions>, <mapObj>);
+
 customPolyline.addLatLng(<latLng>,<vehicleObj>);
+
 customPolyline.plotPolyline();
 
 Legend:
+
 1. Example of polyine options:
+
 {
+
 	strokeColor: '#000',
-  strokeOpacity: 0,
-  strokeWeight: 10,
-  icons: [
-    {
-      icon: {
-        path: <SVG string>,
-        anchor: newgoogle.maps.Point(47.5,
-        0),
-        strokeColor: '#000',
-        strokeOpacity: 0.5,
-        fillColor: 'red',
-        //Car/SVGcolorfillOpacity: 1,
-        scale: 0.11//Car/SVGsize/scale
-      };offset: '0%'
-    }
-  ]
+	
+  	strokeOpacity: 0,
+	
+  	strokeWeight: 10,
+
+	icons: [
+	
+	{
+      		
+		icon: {
+       
+       			path: <SVG>, //SVG string or path foes here
+			
+        		anchor: newgoogle.maps.Point(47.5, 0),
+			
+       			strokeColor: '#000',
+			
+        		strokeOpacity: 0.5,
+			
+        		fillColor: 'red', //Car/SVGcolor
+			
+       			fillOpacity: 1,
+			
+        		scale: 0.11      //Car/SVGsize/scale
+     		 },
+			
+		 offset: '0%'
+		 
+    	}
+	
+  	]
+	
 }
 
 Work in progress : Working to integrate with snap to roads to make the vehicle stick on roads when played
