@@ -21,13 +21,13 @@ customPolyline.plotPolyline();
 Legend:
 1. Example of polyine options:
 {
-  strokeColor: '#000',
+	strokeColor: '#000',
   strokeOpacity: 0,
   strokeWeight: 10,
   icons: [
     {
       icon: {
-        path: <SVG>, //SVG path notation goes here
+        path: <SVG string>,
         anchor: newgoogle.maps.Point(47.5,
         0),
         strokeColor: '#000',
