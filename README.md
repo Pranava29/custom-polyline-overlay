@@ -25,7 +25,7 @@ customPolyline.plotPolyline();
 
 ### Legend:
 
-1. Example of polyine options:
+1. Example of polyline options:
 
 ```javascript
 {
