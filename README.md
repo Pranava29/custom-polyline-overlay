@@ -66,7 +66,11 @@ customPolyline.plotPolyline();
 }
 ```
 
-Work in progress : Working to integrate with snap to roads to make the vehicle stick on roads when played
+Work in progress : 
+
+1. Working to integrate with snap to roads to make the vehicle stick on roads when played.
+
+2. Live Examples.
 
 
 Note: * Google maps divides the map into panes and overlayMouseTarget pane is the one which receives user clicks
