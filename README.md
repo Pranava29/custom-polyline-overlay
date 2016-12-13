@@ -1,0 +1,2 @@
+# custom-polyline-overlay
+SVGs plotted on Google Maps polylines are not clickable for more information. We have seen live vehicles moving on the map but we never tap on them for more information. This is because google maps allows clicking on objects and google does not render svgs mentioned in the icon sequence as objects. So, we cannot click on them. This library file can be used to plot and play svgs on a polyline. It adds a small info window next to the svg so that we can click on them to get more vehicle stats
