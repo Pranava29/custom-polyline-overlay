@@ -27,7 +27,7 @@ Legend:
 
 1. Example of polyine options:
 
-	{
+{
 
 	strokeColor: '#000',
 	
@@ -62,7 +62,7 @@ Legend:
 	
   	]
 	
-	}
+}
 
 Work in progress : Working to integrate with snap to roads to make the vehicle stick on roads when played
 
