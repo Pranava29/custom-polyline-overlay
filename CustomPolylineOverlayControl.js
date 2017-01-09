@@ -129,18 +129,24 @@ CustomPolylineOverlay.prototype.plotPolyline = function() {
 	var path = this.polyline_.getPath();
 	var length = path.getLength();
 	var intervalObj;
+	var icons = this.polyline_.get('icons');
+	
+	if(length === 3) {	
+		path.removeAt(0);		//This allows for maintaining only two points in the path array so that the svg can move smoothly
+	}
+	
+	icons[0].offset = '0%';		//Resetting offset
+	this.polyline_.set('icons', icons);
 	
 	//Plots the svg on the polyline only when the latest geo point for the vehicle is different from the previous one 
-	if(path.getAt(length-1) && path.getAt(length-2) && path.getAt(length-1).lat() !== path.getAt(length-2).lat() && path.getAt(length-1).lng() !== path.getAt(length-2).lng()) {
+	if(path.getAt(0) && path.getAt(1) && (path.getAt(0).lat() !== path.getAt(1).lat() || path.getAt(0).lng() !== path.getAt(1).lng())) {
 		intervalObj = setInterval(function(polyline, vehicle){
-			var icons = polyline.get('icons');
-		
 			if(icons[0].icon){
 				icons[0].icon.fillColor = getVehicleColorBySpeed(kmToMiles(vehicle.speed));
 			}
-		
+
 			// Allowing a smooth transition from one place to another
-			icons[0].offset = (((length-2)/(length-1))*100+(itr/(length-1))).toString().concat('%'); //Incrementing the percentage offset to plot from the last but one point to the last point
+			icons[0].offset = itr.toString().concat('%'); //Incrementing the percentage offset to plot from the last but one point to the last point
 			polyline.set('icons', icons);
 			itr++;
 			if(itr===101) {
